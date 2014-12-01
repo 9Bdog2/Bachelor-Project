@@ -1,7 +1,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width">
+  <meta name="mobile-web-app-capable" content="yes">
 
   <title>{{appName}} - {{title}}</title>
   <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
@@ -25,6 +26,15 @@
   {% for file in assets.core.css %}
     <link rel="stylesheet" href="/{{file}}">
   {% endfor %}
+
+  <link rel="manifest" href="system/assets/static/manifest.json">
+  <link rel="icon" sizes="512x512" href="system/assets/img/playstore-icon.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="system/assets/img/playstore-icon.png">
+  <script type="text/javascript">
+      window.addEventListener('load', function() {
+          FastClick.attach(document.body);
+      }, false);
+  </script>
 
     <!--[if lt IE 9]>
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

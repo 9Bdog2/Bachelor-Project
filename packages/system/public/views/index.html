@@ -1,0 +1,110 @@
+<section data-ng-controller="IndexController" data-ng-hide="global.authenticated"> <!-- Index section for all users -->
+   <div class="header-box">
+        <div class="box-wide panel-box">
+            <div class="header-text-box">
+                <h2 class="header-box-headline">H.I.T.T.</h2>
+                <p>Workout with no need for excuses</p>
+                <a href="#manifesto" class="read-manifesto-button"><i class="icon-down-open-big"></i>Read the manifesto<i class="icon-down-open-big"></i></a> 
+            </div>
+        </div>
+    </div>
+
+    <div class="manifesto" id="manifesto">
+        <div class="box-wide panel-box">
+            <h4>We’re not perfect! We’re real people!</h4>
+            <div class="content-editor">
+                <p>Today’s world is a harsh one, with everyone promising you the perfect something. The perfect skin, the perfect hair, the perfect body, the perfect relationship, the perfect anything-they-could-tell-you-to-buy-their-lie.</p>
+                <p>We don’t believe in that!</p>
+                <p>We believe in a simple world, where nothing is perfect. But everything is beautiful.</p>
+                <p>We believe in a bright smile, in a healthy body, in feeling full of energy, in having time for everything.</p>
+                <p>This is why we built H.I.T.T. - a simple challenge workout system, that takes less than drinking a coffee, knows how to motivate you and how hard to push you.</p>
+                <a href="#register-email" class="button i-agree-button">I agree</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup contact-popup">
+        <div class="popup-background"></div>
+        <div class="popup-body">
+            <div class="popup-content">
+                <h4>Contact us</h4>
+                <form>
+                    <input type="email" name="email" class="form-email-address" placeholder="What's your email address?"/>
+                    <input type="text" name="subject" class="form-subject" placeholder="What's the message about?"/>
+                    <textarea class="form-text" name="message" placeholder="What's your message?"></textarea>
+                    <a href="#" class="button submit-button" type="submit" value="Send message">Send message</a>         
+                </form>
+                <i class="popup-close-button icon-close"></i>
+            </div>
+        </div>
+    </div>
+  
+</section> <!-- Index section for all users -->
+
+<section data-ng-controller="IndexController" data-ng-show="global.authenticated"> <!--All work-outs for authenticated users-->
+  <div class="status-box">
+        <div class="box-wide panel-box">
+            <div class="status-content-box">
+                <div class="status-current-text-box">
+                    <h4 class="status-headline">Current workout</h4>
+                    <a href="7-min.html" class="button status-workout-button">Start today's workout</a>
+                </div>
+                <div class="content-editor">
+                    <p>You've been going on for 5 days. Way to go!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="challenges-box">
+        <div class="box-wide pane-box">
+            <div class="challenges-content">
+                <h1 class="box-headline"></h1>
+                <div class="column-grid">
+                    <a href="#" class="challenge-item box-quarter">
+                        <img class="challenge-hero-image" src="/system/assets/img/background/workout.jpg" alt=""/>
+                        <div class="challenge-item-body">
+                            <h4 class="challenge-title">7 minutes workout</h4>
+                            <p class="challenge-short-info">All body workout</p>
+                        </div> 
+                    </a>
+                    <a href="#" class="challenge-item box-quarter">
+                        <img class="challenge-hero-image" src="/system/assets/img/background/workout.jpg" alt=""/>
+                        <div class="challenge-item-body">
+                            <h4 class="challenge-title">7 minutes workout</h4>
+                            <p class="challenge-short-info">All body workout</p>
+                        </div> 
+                    </a>
+                    <a href="#" class="challenge-item box-quarter">
+                        <img class="challenge-hero-image" src="/system/assets/img/background/workout.jpg" alt=""/>
+                        <div class="challenge-item-body">
+                            <h4 class="challenge-title">7 minutes workout</h4>
+                            <p class="challenge-short-info">All body workout</p>
+                        </div> 
+                    </a>
+                    <a href="#" class="challenge-item box-quarter">
+                        <img class="challenge-hero-image" src="/system/assets/img/background/workout.jpg" alt=""/>
+                        <div class="challenge-item-body">
+                            <h4 class="challenge-title">7 minutes workout</h4>
+                            <p class="challenge-short-info">All body workout</p>
+                        </div> 
+                    </a>
+                    <a href="#" class="challenge-item box-quarter">
+                        <img class="challenge-hero-image" src="/system/assets/img/background/workout.jpg" alt=""/>
+                        <div class="challenge-item-body">
+                            <h4 class="challenge-title">7 minutes workout</h4>
+                            <p class="challenge-short-info">All body workout</p>
+                        </div> 
+                    </a>
+                    <a href="#" class="challenge-item box-quarter">
+                        <img class="challenge-hero-image" src="/system/assets/img/background/workout.jpg" alt=""/>
+                        <div class="challenge-item-body">
+                            <h4 class="challenge-title">7 minutes workout</h4>
+                            <p class="challenge-short-info">All body workout</p>
+                        </div> 
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- All work-outs for authenticated users -->

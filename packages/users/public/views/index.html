@@ -1,4 +1,4 @@
-<div class="login-box" ng-controller="AuthCtrl" ng-class="{'register-form' : global.registerForm}">
+<div class="login-box" ng-controller="AuthCtrl" data-ng-hide="global.authenticated" ng-class="{'register-form' : global.registerForm}">
     <div class="box-wide panel-box" ui-view></div>
     <!-- <div class="login-form__center">
         <p>or</p>  
@@ -35,3 +35,4 @@
         </div> -->
     </div>
 </div>
+

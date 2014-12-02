@@ -37,49 +37,64 @@
   </div>
 </div> -->
 
-<header>
-  <h1 >H.I.T.T. Challenge</h1>
+<div class="guest-user-header" data-ng-hide="global.authenticated">
+  <div class="box-wide">
+    <a class="logo" ui-sref="home"><span class="logo-text">H.I.T.T.</span></a>
+    <i class="ion-navicon button-right navigaton-button"></i>
+  </div>
+</div>
+
+<header class="active-user" data-ng-show="global.authenticated">
+  <h1>H.I.T.T. Challenge</h1>
   <i class="ion-navicon button-right navigaton-button"></i>
 </header> 
 
 <div class="page-overlay"></div>
-<div class="side-bar">
+<div class="side-bar guest-user" data-ng-hide="global.authenticated">
     <div class="global-navigation">
-        <a href="#" class="global-navigation-item" data-ng-hide="global.authenticated">
+        <a href="#" class="global-navigation-item">
             Menu
         </a>
-        <a ui-sref="home" class="global-navigation-item" data-ng-hide="global.authenticated">
+        <a ui-sref="home" class="global-navigation-item">
             <i class="ion-ios7-home global-navigation-item-icon"></i>
             Home
         </a>
-        <a ui-sref='auth.register' class="global-navigation-item" data-ng-hide="global.authenticated">
+        <a ui-sref='auth.register' class="global-navigation-item">
             <i class="ion-ios7-personadd global-navigation-item-icon"></i>
             Signup
         </a>
-        <a ui-sref='auth.login' class="global-navigation-item" data-ng-hide="global.authenticated">
+        <a ui-sref='auth.login' class="global-navigation-item">
             <i class="ion-ios7-people global-navigation-item-icon"></i>
             Login
         </a>
-        <a href="#" class="global-navigation-item" data-ng-show="global.authenticated">
+        <a ui-sref="contact example page" class="global-navigation-item">
+            <i class="ion-ios7-compose global-navigation-item-icon"></i>
+            Contact us
+        </a>
+    </div>
+</div>
+<div class="side-bar active-user" data-ng-show="global.authenticated" data-ng-controller="HeaderController">
+    <div class="global-navigation">
+        <a href="#" class="global-navigation-item">
             {{global.user.name}}
         </a>
-        <a  ui-sref="home" class="global-navigation-item" data-ng-show="global.authenticated">
+        <a  ui-sref="home" class="global-navigation-item">
             <i class="ion-ios7-albums global-navigation-item-icon"></i>
             All workouts
         </a>
-        <a href="#" class="global-navigation-item" data-ng-show="global.authenticated">
+        <a ui-sref="profile example page" class="global-navigation-item">
             <i class="ion-ios7-people global-navigation-item-icon"></i>
             Profile
         </a>
-        <a href="#" class="global-navigation-item" data-ng-show="global.authenticated">
+        <a ui-sref="motivational example page"class="global-navigation-item">
             <i class="ion-ios7-cog global-navigation-item-icon"></i>
             Motivational
         </a>
-        <a href="/logout" class="global-navigation-item" data-ng-show="global.authenticated">
+        <a href="/logout" class="global-navigation-item">
             <i class="ion-ios7-people global-navigation-item-icon"></i>
             Logout
         </a>
-        <a href="contact.html" class="global-navigation-item">
+        <a ui-sref="contact example page" class="global-navigation-item">
             <i class="ion-ios7-compose global-navigation-item-icon"></i>
             Contact us
         </a>

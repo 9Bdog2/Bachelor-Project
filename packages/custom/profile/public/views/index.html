@@ -1,0 +1,82 @@
+<div class="profile-box">
+    <div class="extra-wide panel-box">
+        <div class="profile-content">
+            <img class="profile-user-image" src="/custom/profile/assets/img/user.jpg" alt=""/>
+            <h1 class="box-headline">John Doe</h1>
+            <div class="profile-list column-grid">
+                <span class="profile-item change-username-button">
+                    <span class="profile-item-icon ion-ios7-people"></span>
+                    <span class="profile-item-text">John Doe</span>
+                    <span class="profile-item-arrow ion-chevron-right"></span>
+                </span>
+                <span class="profile-item change-password-button">
+                    <span class="profile-item-icon ion-key"></span>
+                    <span class="profile-item-text">********</span>
+                    <span class="profile-item-arrow ion-chevron-right"></span>
+                </span>
+                <span class="profile-item">
+                    <span class="profile-item-icon"></span>
+                    <span class="profile-item-text">Male</span>
+                    <span class="profile-item-arrow ion-chevron-right"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup-box change-username-popup">
+    <div class="popup-content">
+        <div class="popup-body">
+            <h5 class="popup-headline">Change username</h5>
+            <form class="popup-form">
+                <input class="popup-input" placeholder="New username"/>
+            </form>
+        </div>
+        <div class="popup-footer">
+            <!-- There are two types of buttons for the popup-footer, a popup-button half for where there are 2 buttons and a popup-button large for single full width button -->
+            <span class="popup-button box-full save-button">Save changes</span>
+        </div>
+    </div>
+</div>
+<div class="popup-box change-password-popup">
+    <div class="popup-content">
+        <div class="popup-body">
+            <h5 class="popup-headline">Change password</h5>
+            <form class="popup-form">
+                <input class="popup-input" placeholder="Old password"/>
+                <input class="popup-input" placeholder="New password"/>
+                <input class="popup-input" placeholder="Repeat password"/>
+            </form>
+        </div>
+        <div class="popup-footer">
+            <!-- There are two types of buttons for the popup-footer, a popup-button half for where there are 2 buttons and a popup-button large for single full width button -->
+            <span class="popup-button box-full save-button">Save changes</span>
+        </div>
+    </div>
+</div>
+
+<script>
+$("a").click(function (event) {
+    event.preventDefault();
+    window.location = $(this).attr("href");
+});
+// $('.navigaton-button').click( function() {
+//     $('.side-bar').toggleClass('active');
+//      $('.page-overlay').toggleClass('active');
+// });
+// $('.page-overlay').click( function() {
+//     $('.side-bar').removeClass('active');
+//     $('.page-overlay').removeClass('active');
+// });
+$('.change-username-button').click(function(){
+    $('.page-overlay').addClass('active');
+    $('.change-username-popup').addClass('active');
+});
+$('.change-password-button').click(function(){
+    $('.page-overlay').addClass('active');
+    $('.change-password-popup').addClass('active');
+});
+$('.save-button').click(function() {
+    $('.page-overlay').removeClass('active');
+    $('.popup-box').removeClass('active');
+});
+</script>

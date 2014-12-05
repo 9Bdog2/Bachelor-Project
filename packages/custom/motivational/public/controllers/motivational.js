@@ -8,3 +8,5 @@ angular.module('mean.motivational').controller('MotivationalController', ['$scop
     };
   }
 ]);
+
+ 

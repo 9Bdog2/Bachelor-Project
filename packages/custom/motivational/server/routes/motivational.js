@@ -23,4 +23,8 @@ module.exports = function(Motivational, app, auth, database) {
       res.send(html);
     });
   });
+
+ 
+
 };
+

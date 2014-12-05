@@ -122,7 +122,7 @@ textarea .input { height:7em; line-height:1.5em; padding:1em 0.5em; }
 .global-navigation-item-icon { margin-right:.6em; }
 
 /* Status box */
-.status-box { height:100%; background-image:url('../images/workout.jpg'); background-repeat:no-repeat; background-size:cover; background-position:center; background-color:purple; }
+.status-box { height:100%; background-image:url('../assets/img/workouts/workout.jpg'); background-repeat:no-repeat; background-size:cover; background-position:center; background-color:purple; }
 .status-box .panel-box { height:100%; }
 .status-content-box { position:relative; top:50%; transform:translateY(-50%); color:#fff; }
 

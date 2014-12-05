@@ -26,6 +26,8 @@ Motivational.register(function(app, auth, database) {
   
   Motivational.aggregateAsset('css', 'motivational.css');
 
+
+
   /**
     //Uncomment to use. Requires meanio@0.3.7 or above
     // Save settings with callback

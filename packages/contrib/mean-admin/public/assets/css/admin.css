@@ -1,9 +1,8 @@
 .admin-menu {
     z-index:1;
     position: fixed;
-    background-color: #176583;
     height: 100%;
-    top: 51px;
+    top: 55%;
     width: 60px;
 }
 .admin-menu #stable .showbox {
@@ -32,7 +31,7 @@
 }
 .admin-menu #stable:hover, .admin-menu #stable:hover .showbox.wide{
     background-color: #103c4d;
-}
+}rs
 .admin-menu #stable .showbox.wide {
     background-color: #176583;
 }
@@ -80,3 +79,5 @@ tr.disabled {
 span.editable-wrapper input {
     width: 80%;
 }
+
+.admin-navigation-icon { width:13px; margin-right:.6em; }

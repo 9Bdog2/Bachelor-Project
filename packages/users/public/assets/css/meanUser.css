@@ -161,11 +161,12 @@ textarea .input { height:7em; line-height:1.5em; padding:1em 0.5em; }
 /* Current workout box */
 .current-workout-box { height:90%; margin-top:5%; }
 .current-workout-box .panel-box { height:100%; }
-.current-workout-content-box { position:relative; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); -mox-transform:translateY(-50%); -ms-transform:translateY(-50%); color:#38474e; }
-.current-workout-picture { width:100%; }
-.time-left { font-size:6em; text-align:center; margin-bottom:0.2em; }
-.current-exercise-status { font-size:2.5em; text-align:center; margin-bottom:0.8em; }
-.next-exercise { text-align:center; }
+.current-workout-content-box { position:relative; top:50%; -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); transform:translateY(-50%); color:#38474e; }
+.current-workout-picture { width:80%; margin:0 10%; }
+.current-workout-details { overflow:hidden; background-color:#ffffff; }
+small { font-size:.8em; margin-bottom:1em; font-weight: 500; }
+.time-left { font-size:6em; text-align:center; margin-bottom:.2em; border-bottom:.02em solid rgb(247, 247, 247); padding:.2em; background-color:#ffffff; }
+.current-exercise-status, .next-exercise { font-size:2em; text-align:center; margin-bottom:.8em; padding:.5em; font-weight:600;}
 
 /* Challenges box */
 .challenge-item { background-color:#fff; margin-bottom:1em; color:#333; display:inline-block; }

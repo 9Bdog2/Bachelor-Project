@@ -1,0 +1,95 @@
+<div class="" data-ng-controller="WorkoutController">
+   <header>
+        <a ui-sref="home" class="button-left back">Back</a>
+        <h1>7 min workout</h1>
+        <i class="ion-navicon button-right navigaton-button"></i>
+    </header>
+
+    <div class="current-workout-box">
+        <div class="extra-wide panel-box">
+            <div class="current-workout-content-box">
+                <img class="current-workout-picture" id="current-workout-picture" src="workout/assets/img/workouts/break.png" />
+                <div class="current-workout-details">
+                    <h3 class="time-left">Ready?</h3>
+                    <h3 class="next-exercise box-half"><small>First</small><br/>Jumping jacks</h3>
+                    <h3 class="current-exercise-status box-half"><small>Done</small><br/>0 / 14</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="popup-box start-exercise-popup active">
+        <div class="popup-content">
+            <div class="popup-body">
+                <h5 class="popup-headline">Ready?</h5>
+                <p>Don't forget to have a glass or bottle of water next to you.</p>
+                <p>You'll have a break for it midway through the exercise.</p>
+                <p>Rock on!</p>
+            </div>
+            <div class="popup-footer">
+               <!--  There are two types of buttons for the popup-footer, a popup-button half for where there are 2 buttons and a popup-button large for single full width button -->
+                <span class="popup-button alert start-exercise-button full">Start!</span>
+            </div>
+        </div>
+    </div> 
+
+    <script type="text/javascript">
+      var exercises = ['Side planks', 'Side push-ups', 'Lunges', 'Sprint', 'Plank', 'Triceps dips', 'Water break', 'Squats', 'Stepping', 'Crunches', 'Push-ups', 'Wall sit', 'Jumping jacks'];
+var exercisesImages = ['/system/assets/img/background/workout.jpgworkout-12.png', 'workout/assets/img/workouts/workout-11.png', 'workout/assets/img/workouts/workout-10.png', 'workout/assets/img/workouts/workout-09.png', 'workout/assets/img/workouts/workout-08.png', 'workout/assets/img/workouts/workout-07.png', 'workout/assets/img/workouts/water-break.png', 'workout/assets/img/workouts/workout-06.png', 'workout/assets/img/workouts/workout-05.png', 'workout/assets/img/workouts/workout-04.png', 'workout/assets/img/workouts/workout-03.png', 'workout/assets/img/workouts/workout-02.png', 'workout/assets/img/workouts/workout-01.png', ]
+var exercisesTotal = 13;
+var secondsPerExercise = 5;
+var currentExercise = exercisesTotal;
+var currentSecconds = secondsPerExercise;
+var t;
+var timer_is_on = 0;
+var timeGap = false;
+    
+function timedCount() {
+    $('.time-left').html(currentSecconds + ' sec');
+    if ( currentExercise > 2 ) {
+        if (currentSecconds > 0) {
+            currentSecconds --;
+            t = setTimeout(function(){timedCount()}, 1000);
+            $('.next-exercise').html('<small>Next</small><br/>'+ exercises[currentExercise-3]);
+        } else {
+            if (!timeGap) {
+                timeGap = true;
+                currentSecconds = 3;
+                t = setTimeout(function(){timedCount()}, 1000);
+                currentExercise --;
+                document.getElementById("current-workout-picture").src = 'workout/assets/img/workouts/short-break.png';
+                $('.next-exercise').html('<small>Next</small><br/>'+ exercises[currentExercise-2]);
+            } else {
+                currentSecconds = secondsPerExercise;
+                document.getElementById("current-workout-picture").src = exercisesImages[currentExercise-2];
+                timeGap = false;
+                t = setTimeout(function(){timedCount()}, 1000);
+            }
+        };
+    } else {
+        $('.page-overlay').addClass('active');
+        $('.finish-exercise-popup').addClass('active');
+        stopCount();
+    }
+}
+
+function startCount() {
+    if (!timer_is_on) {
+        timer_is_on = 1;
+        timedCount();
+    }
+}
+
+function stopCount() {
+    clearTimeout(t);
+    timer_is_on = 0;
+}
+
+    
+        $('.start-exercise-button').click(function(){
+          $('.start-exercise-popup').removeClass('active');
+          setTimeout(function(){startCount();}, 300);
+      });
+    </script>
+

@@ -1,0 +1,21 @@
+<section data-ng-controller="MotivesController" data-ng-init="find()">
+  <ul class="motives unstyled">
+    <li data-ng-repeat="motive in motives">
+      <span>{{motive.created | date:'medium'}}</span> /
+      <span>{{motive.user.name}}</span>
+      <h2>
+        <a data-ng-href="#!/motives/{{motive._id}}"><!-- {{motive.title}} -->Motive</a>
+        <span>
+          <a class="btn" href="/#!/motives/{{motive._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn" data-ng-click="remove(motive);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </span>
+      </h2>
+      <div>{{motive.content}}</div>
+    </li>
+  </ul>
+  <h1 data-ng-hide="!motives || motives.length">No motives yet. <br> Why don't you <a href="/#!/motives/create">Create One</a>?</h1>
+</section>

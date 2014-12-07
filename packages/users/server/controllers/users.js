@@ -94,6 +94,34 @@ exports.create = function(req, res, next) {
 
       return res.status(400);
     }
+    var transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: 'office.hittchallenge@gmail.com',
+        pass: 'Hitt@rocks!'
+    }
+    });
+
+    // NB! No need to recreate the transporter object. You can use
+    // the same transporter object for all e-mails
+
+    // setup e-mail data with unicode symbols
+    var mailOptions = {
+        from: 'HITT ✔ <office.hittchallenge@gmail.com>', // sender address
+        to: user.email, // list of receivers
+        subject: 'Hello ✔', // Subject line
+        text: 'Hello world ✔', // plaintext body
+        html: '<b>Hello world ✔</b>' // html body
+    };
+
+    // send mail with defined transport object
+    transporter.sendMail(mailOptions, function(error, info){
+        if(error){
+            console.log(error);
+        }else{
+            console.log('Message sent: ' + info.response);
+        }
+    });
     req.logIn(user, function(err) {
       if (err) return next(err);
       return res.redirect('/');
@@ -189,16 +217,16 @@ exports.forgotpassword = function(req, res, next) {
         });
       },
       function(token, done) {
-        User.findOne({
-          $or: [{
-            email: req.body.text
-          }, {
-            username: req.body.text
-          }]
-        }, function(err, user) {
-          if (err || !user) return done(true);
-          done(err, user, token);
-        });
+        // User.findOne({
+        //   $or: [{
+        //     email: req.body.text
+        //   }, {
+        //     username: req.body.text
+        //   }]
+        // }, function(err, user) {
+        //   if (err || !user) return done(true);
+        //   done(err, user, token);
+        // });
       },
       function(user, token, done) {
         user.resetPasswordToken = token;
@@ -209,7 +237,7 @@ exports.forgotpassword = function(req, res, next) {
       },
       function(token, user, done) {
         var mailOptions = {
-          to: user.email,
+          to: 'radulescu.a.d@gmail.com',
           from: config.emailFrom
         };
         mailOptions = templates.forgot_password_email(user, req, token, mailOptions);

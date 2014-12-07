@@ -6,7 +6,7 @@ module.exports = {
     debug: true
   },
   app: {
-    name: 'MEAN - FullStack JS - Development'
+    name: 'HITT Challenge - Development'
   },
   facebook: {
     clientID: 'DEFAULT_APP_ID',
@@ -37,8 +37,8 @@ module.exports = {
   mailer: {
     service: 'Gmail',
     auth: {
-      user: 'office.hittchallenge@gmail.com',
-      pass: 'Hitt@rocks!'
+        user: 'office.hittchallenge@gmail.com',
+        pass: 'Hitt@rocks!'
     }
   }
 };

@@ -13,6 +13,9 @@
 .forgotten-password { font-size:1.2em; width:50%; text-align:left; display:inline-block; float:left; }
 .register-small-button { font-size:1.2em; width:50%; text-align:right; display:inline-block; }
 
+/* Forgoten password */
+.forgot_password_form { position:relative; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); -mox-transform:translateY(-50%); -ms-transform:translateY(-50%); }
+
 /* signup box */
 .signup-box { height:100%; }
 .signup-box .panel-box { height:100%; }

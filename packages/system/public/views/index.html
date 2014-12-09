@@ -4,22 +4,24 @@
         <div class="box-wide panel-box">
             <div class="header-text-box">
                 <h2 class="header-box-headline">H.I.T.T.</h2>
-                <p>Workout with no need for excuses</p>
+                <h6>Workout with no need for excuses</h6>
                 <span class="read-manifesto-button"><i class="icon-down-open-big"></i>Scroll down to read the manifesto<i class="icon-down-open-big"></i></span> 
             </div>
         </div>
     </div>
 
-    <div class="resume-box column-grid">
-        <a href="#" class="box-third resume-item">
-            <h2>Why H.I.T.T. trainings rock</h2>
-        </a>
-        <a href="#" class="box-third resume-item">
-            <h2>Read the manifesto</h2>
-        </a>
-        <a href="#" class="box-third resume-item">
-            <h2>How are we different?</h2>
-        </a>
+    <div class="resume-box">
+        <div class="column-grid panel-box">
+            <a href="#" class="box-third resume-item">
+                <h4>Why H.I.T.T. trainings rock</h4>
+            </a>
+            <a href="#" class="box-third resume-item">
+                <h4>Read the manifesto</h4>
+            </a>
+            <a href="#" class="box-third resume-item">
+                <h4>How are we different?</h4>
+            </a>
+        </div>
     </div>
 
     <div class="manifesto" id="manifesto">
@@ -46,43 +48,26 @@
         </div>
     </div>
 
-    <div class="how-are-we-better column-grid" id="how-are-we-better">
-        <div class="box-full box-headline-wrapper">
-            <h1>How are we better?</h1>
-        </div>
-        <div class="box-quarter how-are-we-better-item">
-            <h1 class="box-headline">Title</h1>
-        </div>
-        <div class="box-quarter how-are-we-better-item">
-            <h1 class="box-headline">Title</h1>
-        </div>
-        <div class="box-quarter how-are-we-better-item">
-            <h1 class="box-headline">Title</h1>
-        </div>
-        <div class="box-quarter how-are-we-better-item">
-            <h1 class="box-headline">Title</h1>
-        </div>
-    </div>
-
-    <div class="popup contact-popup">
-        <div class="popup-background"></div>
-        <div class="popup-body">
-            <div class="popup-content">
-                <h4>Contact us</h4>
-                <form>
-                    <input type="email" name="email" class="form-email-address" placeholder="What's your email address?"/>
-                    <input type="text" name="subject" class="form-subject" placeholder="What's the message about?"/>
-                    <textarea class="form-text" name="message" placeholder="What's your message?"></textarea>
-                    <a href="#" class="button submit-button" type="submit" value="Send message">Send message</a>         
-                </form>
-                <i class="popup-close-button icon-close"></i>
+    <div class="how-are-we-better" id="how-are-we-better">
+        <div class="column-grid panel-box">
+            <div class="box-full box-headline-wrapper">
+                <h5>How are we better?</h5>
+            </div>
+            <div class="box-quarter how-are-we-better-item">
+                <h4 class="box-headline">Title</h4>
+            </div>
+            <div class="box-quarter how-are-we-better-item">
+                <h4 class="box-headline">Title</h4>
+            </div>
+            <div class="box-quarter how-are-we-better-item">
+                <h4 class="box-headline">Title</h4>
+            </div>
+            <div class="box-quarter how-are-we-better-item">
+                <h4 class="box-headline">Title</h4>
             </div>
         </div>
     </div>
 </section> <!-- Index section for all users -->
-<footer class="guests-footer" data-ng-hide="global.authenticated">
-    <h4>Copyright</h4>
-</footer>
 
 <section data-ng-controller="IndexController" data-ng-show="global.authenticated"> <!--All work-outs for authenticated users-->
   <div class="status-box">
@@ -102,7 +87,7 @@
     <div class="challenges-box">
         <div class="box-wide pane-box">
             <div class="challenges-content">
-                <h1 class="box-headline"></h1>
+                <h4 class="box-headline"></h4>
                 <div class="column-grid">
                     <a href="#" class="challenge-item box-quarter">
                         <img class="challenge-hero-image" src="/system/assets/img/background/workout.jpg" alt=""/>

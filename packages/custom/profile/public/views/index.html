@@ -2,7 +2,7 @@
     <div class="extra-wide panel-box">
         <div class="profile-content">
             <img class="profile-user-image" src="/profile/assets/img/user.jpg" alt=""/>
-            <h1 class="box-headline">John Doe</h1>
+            <h2 class="box-headline">John Doe</h3>
             <div class="profile-list column-grid">
                 <span class="profile-item change-username-button">
                     <span class="profile-item-icon ion-ios7-people"></span>
@@ -25,22 +25,21 @@
 </div>
 <div class="popup-box change-username-popup">
     <div class="popup-content">
+        <h5 class="popup-headline">Change username</h5>
         <div class="popup-body">
-            <h5 class="popup-headline">Change username</h5>
             <form class="popup-form">
                 <input class="popup-input" placeholder="New username"/>
             </form>
         </div>
         <div class="popup-footer">
-            <!-- There are two types of buttons for the popup-footer, a popup-button half for where there are 2 buttons and a popup-button large for single full width button -->
-            <span class="popup-button box-full save-button">Save changes</span>
+            <span class="button save-button">Save changes</span>
         </div>
     </div>
 </div>
 <div class="popup-box change-password-popup">
     <div class="popup-content">
+        <h5 class="popup-headline">Change password</h5>
         <div class="popup-body">
-            <h5 class="popup-headline">Change password</h5>
             <form class="popup-form">
                 <input class="popup-input" placeholder="Old password"/>
                 <input class="popup-input" placeholder="New password"/>
@@ -48,25 +47,12 @@
             </form>
         </div>
         <div class="popup-footer">
-            <!-- There are two types of buttons for the popup-footer, a popup-button half for where there are 2 buttons and a popup-button large for single full width button -->
-            <span class="popup-button box-full save-button">Save changes</span>
+            <span class="button save-button">Save changes</span>
         </div>
     </div>
 </div>
 
 <script>
-$("a").click(function (event) {
-    event.preventDefault();
-    window.location = $(this).attr("href");
-});
-// $('.navigaton-button').click( function() {
-//     $('.side-bar').toggleClass('active');
-//      $('.page-overlay').toggleClass('active');
-// });
-// $('.page-overlay').click( function() {
-//     $('.side-bar').removeClass('active');
-//     $('.page-overlay').removeClass('active');
-// });
 $('.change-username-button').click(function(){
     $('.page-overlay').addClass('active');
     $('.change-username-popup').addClass('active');

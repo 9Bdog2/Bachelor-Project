@@ -1,4 +1,5 @@
 <section data-ng-controller="IndexController" data-ng-hide="global.authenticated"> <!-- Index section for all users -->
+
     <div class="header-box">
         <div class="box-wide panel-box">
             <div class="header-text-box">
@@ -7,6 +8,18 @@
                 <span class="read-manifesto-button"><i class="icon-down-open-big"></i>Scroll down to read the manifesto<i class="icon-down-open-big"></i></span> 
             </div>
         </div>
+    </div>
+
+    <div class="resume-box column-grid">
+        <a href="#" class="box-third resume-item">
+            <h2>Why H.I.T.T. trainings rock</h2>
+        </a>
+        <a href="#" class="box-third resume-item">
+            <h2>Read the manifesto</h2>
+        </a>
+        <a href="#" class="box-third resume-item">
+            <h2>How are we different?</h2>
+        </a>
     </div>
 
     <div class="manifesto" id="manifesto">
@@ -20,6 +33,34 @@
                 <p>This is why we built H.I.T.T. - a simple challenge workout system, that takes less than drinking a coffee, knows how to motivate you and how hard to push you.</p>
                 <a href="#register-email" class="button i-agree-button">I agree</a>
             </div>
+        </div>
+    </div>
+
+    <div class="about-hitt-workouts" id="about-hitt-workouts">
+        <div class="box-wide panel-box">
+            <h4 class="box-headline">About hiit workouts</h4>
+            <div class="column-grid text-content">
+                <div class="box-half text-column"></div>
+                <div class="box-half text-column"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="how-are-we-better column-grid" id="how-are-we-better">
+        <div class="box-full box-headline-wrapper">
+            <h1>How are we better?</h1>
+        </div>
+        <div class="box-quarter how-are-we-better-item">
+            <h1 class="box-headline">Title</h1>
+        </div>
+        <div class="box-quarter how-are-we-better-item">
+            <h1 class="box-headline">Title</h1>
+        </div>
+        <div class="box-quarter how-are-we-better-item">
+            <h1 class="box-headline">Title</h1>
+        </div>
+        <div class="box-quarter how-are-we-better-item">
+            <h1 class="box-headline">Title</h1>
         </div>
     </div>
 
@@ -39,6 +80,9 @@
         </div>
     </div>
 </section> <!-- Index section for all users -->
+<footer class="guests-footer" data-ng-hide="global.authenticated">
+    <h4>Copyright</h4>
+</footer>
 
 <section data-ng-controller="IndexController" data-ng-show="global.authenticated"> <!--All work-outs for authenticated users-->
   <div class="status-box">

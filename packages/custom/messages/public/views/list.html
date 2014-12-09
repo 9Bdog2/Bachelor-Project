@@ -1,0 +1,21 @@
+<section data-ng-controller="MessagesController" data-ng-init="find()">
+  <ul class="messages unstyled">
+    <li data-ng-repeat="message in messages">
+      <span>{{message.created | date:'medium'}}</span> /
+      <span>{{message.user.name}}</span>
+      <h2>
+        <a data-ng-href="#!/messages/{{message._id}}">{{message.title}}</a>
+        <span data-ng-if="hasAuthorization(message)">
+          <a class="btn" href="/#!/messages/{{message._id}}/edit">
+            <i class="glyphicon glyphicon-edit"></i>
+          </a>
+          <a class="btn" data-ng-click="remove(message);">
+            <i class="glyphicon glyphicon-trash"></i>
+          </a>
+        </span>
+      </h2>
+      <div>{{message.content}}</div>
+    </li>
+  </ul>
+  <h1 data-ng-hide="!messages || messages.length">No messages yet. <br> Why don't you <a href="/#!/messages/create">Create One</a>?</h1>
+</section>

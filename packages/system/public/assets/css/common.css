@@ -89,7 +89,6 @@ header .button-right { position:absolute; top:0; right:0; height:44px; font-size
 header h1 { line-height:inherit; font-size:inherit; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-weight:400; }
 
 /* iOS specific */
-body { padding-top:4.4em; }
 header { font-size:17px; background-color:rgb(255, 255, 255); padding:0 88px; border-bottom:1px solid #ddd; }
 header .button-left { color:#16a085; padding-left:24px; }
 header .button-left:before { content:''; position:absolute; top:50%; margin-top:-6px; left:10px; width:10px; height:10px; border:3px solid #16a085; border-right:none; border-top:none; -webkit-transform:rotate(45deg); -moz-transform:rotate(45deg); -ms-transform:rotate(45deg); transform:rotate(45deg); }
@@ -103,7 +102,7 @@ header h1 { font:-apple-system-headline; line-height:inherit; text-align:center;
 
 
 /* Header */
-.guest-user-header { height:6em; width:100%; position:fixed; top:0; left:0; color:#000; z-index:2; background-color:#27ae60; }
+.guest-user-header { height:6em; width:100%; position:absolute; top:0; left:0; color:#000; z-index:2; background-color:transparent; }
 .guest-user-header .box-wide { position:relative; }
 .guest-user-header .logo { float:left; }
 .guest-user-header .logo-text { font-family:"slim-joe"; color:#fff; font-size:3em; line-height:2.2em; font-weight:700; }

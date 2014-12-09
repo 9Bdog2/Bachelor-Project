@@ -1,0 +1,14 @@
+<section data-ng-controller="MessagesController" data-ng-init="findOne()">
+  <span>{{message.created | date:'medium'}}</span> /
+  <span>{{message.user.name}}</span>
+  <h2>{{message.title}}</h2>
+  <div data-ng-if="hasAuthorization(message)">
+    <a class="btn" href="/#!/messages/{{message._id}}/edit">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn" data-ng-click="remove(message);">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div>{{message.content}}</div>
+</section>

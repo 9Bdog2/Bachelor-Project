@@ -1,29 +1,30 @@
 <div class="profile-box">
     <div class="extra-wide panel-box">
         <div class="profile-content">
-            <img class="profile-user-image" src="/profile/assets/img/user.jpg" alt=""/>
+            <img class="round-user-image" src="/profile/assets/img/user.jpg" alt=""/>
             <h2 class="box-headline">John Doe</h3>
-            <div class="profile-list column-grid">
-                <span class="profile-item change-username-button">
-                    <span class="profile-item-icon ion-ios7-people"></span>
-                    <span class="profile-item-text">John Doe</span>
-                    <span class="profile-item-arrow ion-chevron-right"></span>
+            <div class="list column-grid">
+                <span class="list-item change-username-button">
+                    <span class="list-item-icon ion-ios7-people"></span>
+                    <span class="list-item-text">John Doe</span>
+                    <span class="list-item-arrow ion-chevron-right"></span>
                 </span>
-                <span class="profile-item change-password-button">
-                    <span class="profile-item-icon ion-key"></span>
-                    <span class="profile-item-text">********</span>
-                    <span class="profile-item-arrow ion-chevron-right"></span>
+                <span class="list-item change-password-button">
+                    <span class="list-item-icon ion-key"></span>
+                    <span class="list-item-text">********</span>
+                    <span class="list-item-arrow ion-chevron-right"></span>
                 </span>
-                <span class="profile-item">
-                    <span class="profile-item-icon"></span>
-                    <span class="profile-item-text">Male</span>
-                    <span class="profile-item-arrow ion-chevron-right"></span>
+                <span class="list-item">
+                    <span class="list-item-icon"></span>
+                    <span class="list-item-text">Male</span>
+                    <span class="list-item-arrow ion-chevron-right"></span>
                 </span>
             </div>
         </div>
     </div>
 </div>
 <div class="popup-box change-username-popup">
+    <div class="popup-background"></div>
     <div class="popup-content">
         <h5 class="popup-headline">Change username</h5>
         <div class="popup-body">
@@ -37,6 +38,7 @@
     </div>
 </div>
 <div class="popup-box change-password-popup">
+    <div class="popup-background"></div>
     <div class="popup-content">
         <h5 class="popup-headline">Change password</h5>
         <div class="popup-body">
@@ -54,15 +56,15 @@
 
 <script>
 $('.change-username-button').click(function(){
-    $('.page-overlay').addClass('active');
     $('.change-username-popup').addClass('active');
 });
 $('.change-password-button').click(function(){
-    $('.page-overlay').addClass('active');
     $('.change-password-popup').addClass('active');
 });
 $('.save-button').click(function() {
-    $('.page-overlay').removeClass('active');
     $('.popup-box').removeClass('active');
 });
+$('.popup-background').click(function() {
+    $('.popup-box').removeClass('active');
+})
 </script>

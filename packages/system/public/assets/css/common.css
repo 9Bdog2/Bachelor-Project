@@ -6,7 +6,7 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 * { -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; -webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-tap-highlight-color:transparent; }
 *:not(input) { -webkit-touch-callout:none; -webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none; }
 html { width:100%; height:100%; background-color:#f5f5f5; }
-body { width:100%; height:100%; font-size:10px; font-family:'Roboto', 'HelveticaNeue', Helvetica, Arial,sans-serif; font-weight:400; background-color:#eeeeee; position:relative; -webkit-font-smoothing:antialiased; }
+body { width:100%; height:100%; font-size:10px; font-family:'RobotoDraft', 'Roboto', 'HelveticaNeue', Helvetica, Arial,sans-serif; font-weight:400; background-color:#eeeeee; position:relative; -webkit-font-smoothing:antialiased; }
 .clear { clear:both; }
 .clearfix:after { visibility:hidden; display:block; font-size:0; content:" "; clear:both; height:0; }
 .center { text-align:center; }
@@ -71,8 +71,9 @@ p { font-size:1.6em; line-height:1.3em; margin-bottom:.5em; font-weight:300; }
     .column-grid > .box-quarter { width:auto; float:none; clear:both; }
 }
 
-.button { display:inline-block; font-size:1.4em; height:2.6em; line-height:2.6em; margin-right:.6em; min-width:6.3em; overflow:hidden; padding:0 1.15em; text-align:center; text-transform:uppercase; color: #FFFFFF; background-color: #2196F3; -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); font-weight: 500; border-radius:2px; }
-.button-transparent { background-color: #FFFFFF; color: #2196F3; box-shadow:none; }
+.button { display:inline-block; font-size:1.4em; height:2.6em; line-height:2.6em; border:none; margin-right:.6em; min-width:6.3em; overflow:hidden; padding:0 1.15em; text-align:center; text-transform:uppercase; color: #FFFFFF; background-color: #2196F3; -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); font-weight: 500; border-radius:2px; cursor:pointer; }
+.button-transparent { background-color: #FFFFFF; color:#2196F3; box-shadow:none; }
+.button-green { background-color:#27ae60; color:#fff; }
 .status-workout-button { color:#fff; background-color:#e74c3c; }
 .status-workout-button:active { background-color:#c0392b; }
 
@@ -138,7 +139,7 @@ textarea .input { height:7em; line-height:1.5em; padding:1em 0.5em; }
 /* Current workout box */
 .current-workout-box { height:90%; margin-top:5%; }
 .current-workout-box .panel-box { height:100%; }
-.current-workout-content-box { position:relative; top:50%; -webkit-transform:translateY(-50%); -moz-transform:translateY(-50%); -ms-transform:translateY(-50%); transform:translateY(-50%); color:#38474e; }
+.current-workout-content-box { color:#38474e; }
 .current-workout-picture { width:80%; margin:0 10%; }
 .current-workout-details { overflow:hidden; background-color:#ffffff; }
 small { font-size:.8em; margin-bottom:1em; font-weight: 500; }
@@ -164,7 +165,7 @@ small { font-size:.8em; margin-bottom:1em; font-weight: 500; }
 .page-overlay.active { display:block; background-color:rgba(0, 0, 0, .4); -webkit-transform:translate3d(0, 0, 0); -moz-transform:translate3d(0, 0, 0); -ms-transform:translate3d(0, 0, 0); transform:translate3d(0, 0, 0); }
 .side-bar { width:25.6em; height:100%; z-index:5; position:fixed; top:0; background-color:#fff; -webkit-transform:translate3d(-25.6em, 0, 0); -moz-transform:translate3d(-25.6em, 0, 0); -ms-transform:translate3d(-25.6em, 0, 0); transform:translate3d(-25.6em, 0, 0); -webkit-transition:-webkit-transform .3s; -moz-transition:-moz-transform .3s; -ms-transition:-ms-transform .3s; transition:transform .3s; }
 .side-bar.active { -webkit-transform:translate3d(0, 0, 0); -moz-transform:translate3d(0, 0, 0); -ms-transform:translate3d(0, 0, 0); transform:translate3d(0, 0, 0); }
-.global-navigation-header { line-height:2.7em; padding-left:1em; background-color:#00bcd4; color:#fff; }
+.global-navigation-header { line-height:2.7em; padding-left:1em; background-color:#27ae60; color:#fff; }
 .global-navigation { padding:.8em 0; border-bottom:1px solid #e0e0e0; }
 .global-navigation-item { font-size:1.6em; line-height:2em; color:#333; display:block; padding:.5em 1em; }
 .global-navigation-item:hover { background-color:#f5f5f5; color:#111; }

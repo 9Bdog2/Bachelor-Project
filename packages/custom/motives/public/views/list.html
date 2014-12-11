@@ -1,21 +1,12 @@
-<section data-ng-controller="MotivesController" data-ng-init="find()">
-  <ul class="motives unstyled">
-    <li data-ng-repeat="motive in motives">
-      <span>{{motive.created | date:'medium'}}</span> /
-      <span>{{motive.user.name}}</span>
-      <h2>
-        <a data-ng-href="#!/motives/{{motive._id}}"><!-- {{motive.title}} -->Motive</a>
-        <span>
-          <a class="btn" href="/#!/motives/{{motive._id}}/edit">
-            <i class="glyphicon glyphicon-edit"></i>
-          </a>
-          <a class="btn" data-ng-click="remove(motive);">
-            <i class="glyphicon glyphicon-trash"></i>
-          </a>
-        </span>
-      </h2>
-      <div>{{motive.content}}</div>
-    </li>
-  </ul>
-  <h1 data-ng-hide="!motives || motives.length">No motives yet. <br> Why don't you <a href="/#!/motives/create">Create One</a>?</h1>
-</section>
+<div data-ng-controller="MotivesController" data-ng-init="find()">
+  <div class="list">
+    <div class="list-item" data-ng-repeat="motive in motives">
+<!--       <span class="list-item-text">{{motive.created | date:'medium'}}</span>
+ -->      
+        <a class="list-item-icon" href="/#!/motives/{{motive._id}}/edit"><i class="ion-compose"></i></a>
+        <a class="list-item-text short" data-ng-href="#!/motives/{{motive._id}}">{{motive.content}}</a>
+        <a class="list-item-icon-right" data-ng-click="remove(motive);"><i class="ion-trash-b"></i></a>
+    </div>
+  </div>
+  <h1 data-ng-hide="!motives || motives.length">No motives yet. <br> Why don't you <a class="button" href="/#!/motives/create">Create One</a>?</h1>
+</div>

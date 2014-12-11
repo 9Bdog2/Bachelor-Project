@@ -1,25 +1,2 @@
-/* Login box */
-.login-box { height:100%; }
-.login-box .panel-box { height:100%; }
-.login-content-box { position:relative; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); -mox-transform:translateY(-50%); -ms-transform:translateY(-50%); }
-.login-form { background-color:#ffffff; margin-bottom:3em; }
-.login-button { background-color:#27ae60; color:#eeeeee; font-weight:bold; text-transform:uppercase; letter-spacing:1px; }  
-.forgotten-password { font-size:1.2em; width:50%; text-align:left; display:inline-block; float:left; }
-.register-small-button { font-size:1.2em; width:50%; text-align:right; display:inline-block; }
-
-/* Forgoten password */
-.forgot_password_form { position:relative; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); -mox-transform:translateY(-50%); -ms-transform:translateY(-50%); }
-
-/* signup box */
-.signup-box { height:100%; }
-.signup-box .panel-box { height:100%; }
-.signup-content-box { position:relative; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); -mox-transform:translateY(-50%); -ms-transform:translateY(-50%); }
-.signup-form { background-color:#ffffff; }
-.signup-button { background-color:#27ae60; color:#eeeeee; font-weight:bold; text-transform:uppercase; letter-spacing:1px; }  
-
-/* contact box */
-.contact-box { height:100%; }
-.contact-box .panel-box { height:100%; }
-.contact-content-box { position:relative; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%); -mox-transform:translateY(-50%); -ms-transform:translateY(-50%); }
-.contact-form { background-color:#ffffff; margin-bottom:3em; }
-.send-message-button { background-color:#27ae60; color:#eeeeee; font-weight:bold; text-transform:uppercase; letter-spacing:1px; }  
+/* Authorisation box */
+.auth-box { height:100%; }

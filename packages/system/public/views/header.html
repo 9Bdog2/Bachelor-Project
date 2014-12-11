@@ -1,20 +1,23 @@
-<script>
-    $("a").click(function (event) {
-        event.preventDefault();
-        window.location = $(this).attr("href");
-    });
-    $('.navigaton-button').click( function() {
-        $('.side-bar').toggleClass('active');
-         $('.page-overlay').toggleClass('active');
-    });
-    $('.page-overlay').click( function() {
-        $('.side-bar').removeClass('active');
-        $('.page-overlay').removeClass('active');
-    });
-    $('.global-navigation-item').click( function() {
-        $('.side-bar').removeClass('active');
-        $('.page-overlay').removeClass('active');
-    });
+<script type="text/javascript">
+      window.addEventListener('load', function() {
+          FastClick.attach(document.body);
+      }, false);
+      $("a").click(function (event) {
+          event.preventDefault();
+          window.location = $(this).attr("href");
+      });
+      $('.navigaton-button').click( function() {
+          $('.side-bar').toggleClass('active');
+           $('.page-overlay').toggleClass('active');
+      });
+      $('.page-overlay').click( function() {
+          $('.side-bar').removeClass('active');
+          $('.page-overlay').removeClass('active');
+      });
+      $('.global-navigation-item').click( function() {
+          $('.side-bar').removeClass('active');
+          $('.page-overlay').removeClass('active');
+      });
 </script>
 
 

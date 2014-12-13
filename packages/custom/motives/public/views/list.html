@@ -1,12 +1,15 @@
 <div data-ng-controller="MotivesController" data-ng-init="find()">
-  <div class="list">
-    <div class="list-item" data-ng-repeat="motive in motives">
-<!--       <span class="list-item-text">{{motive.created | date:'medium'}}</span>
- -->      
-        <a class="list-item-icon" href="/#!/motives/{{motive._id}}/edit"><i class="ion-compose"></i></a>
-        <a class="list-item-text short" data-ng-href="#!/motives/{{motive._id}}">{{motive.content}}</a>
-        <a class="list-item-icon-right" data-ng-click="remove(motive);"><i class="ion-trash-b"></i></a>
-    </div>
-  </div>
-  <h1 data-ng-hide="!motives || motives.length">No motives yet. <br> Why don't you <a class="button" href="/#!/motives/create">Create One</a>?</h1>
+	<div class="tabs-box">
+		<div class="extra-wide">
+				<a href="/#!/motives" class="tab-element box-half">See all motives</a>
+				<a href="/#!/motives/create" class="tab-element box-half">Add new motive</a>
+		</div>
+	</div>
+  	<div class="list-box">
+	    <div class="list-item" data-ng-repeat="motive in motives">      
+	        <a class="list-item-icon" href="/#!/motives/{{motive._id}}/edit"><i class="ion-compose button-yellow"></i></a>
+	        <a class="list-item-text short" data-ng-href="#!/motives/{{motive._id}}">{{motive.content}}</a>
+	        <a class="list-item-icon-right" data-ng-click="remove(motive);"><i class="ion-trash-b button-red"></i></a>
+	    </div>
+  	</div>
 </div>

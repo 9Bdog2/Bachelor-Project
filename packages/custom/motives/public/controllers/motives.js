@@ -4,22 +4,15 @@ angular.module('mean.motives').controller('MotivesController', ['$scope', '$stat
   function($scope, $stateParams, $location, Global, Motives) {
     $scope.global = Global;
 
-    // $scope.hasAuthorization = function(motive) {
-    //   if (!motive || !motive.user) return false;
-    //   return $scope.global.isAdmin || motive.user._id === $scope.global.user._id;
-    // };
-
     $scope.create = function(isValid) {
       if (isValid) {
         var motive = new Motives({
-          // title: this.title,
           content: this.content
         });
         motive.$save(function(response) {
-          $location.path('motives/' + response._id);
+          $location.path('motives');
         });
 
-        // this.title = '';
         this.content = '';
       } else {
         $scope.submitted = true;

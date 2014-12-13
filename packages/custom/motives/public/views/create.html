@@ -1,6 +1,6 @@
-<section data-ng-controller="MotivesController">
+<!-- <section data-ng-controller="MotivesController">
   <form name="motiveForm" class="form-horizontal col-md-6" role="form" data-ng-submit="create(motiveForm.$valid)" novalidate>
-    <!-- <div class="form-group" ng-class="{ 'has-error' : submitted && motiveForm.title.$invalid }">
+    <div class="form-group" ng-class="{ 'has-error' : submitted && motiveForm.title.$invalid }">
       <label mean-token="'create-title'" class="col-md-3 control-label">Title</label>
       <div class="col-md-9">
         <input name="title" type="text" class="form-control" data-ng-model="title" id="title" placeholder="Title" required>
@@ -9,7 +9,7 @@
         </div>
       </div>
 
-    </div> -->
+    </div>
     <div class="form-group" ng-class="{ 'has-error' : submitted && motiveForm.content.$invalid }">
       <label mean-token="'create-content'" for="content" class="col-md-3 control-label">Content</label>
       <div class="col-md-9">
@@ -25,4 +25,26 @@
       </div>
     </div>
   </form>
-</section>
+</section> -->
+
+<div class="popup-box active" data-ng-controller="MotivesController" data-ng-init="findOne()">
+    <div class="popup-background redirect-popup-overlay no-background-image"></div>
+    <div class="popup-content">
+        <div class="popup-body">
+          <form name="motiveForm" class="popup-form" role="form" data-ng-submit="create(motiveForm.$valid)" novalidate>
+            <div class="form-group" ng-class="{ 'has-error' : submitted && motiveForm.content.$invalid }">
+                <textarea name="content" data-ng-model="content" id="content" cols="30" rows="10" placeholder="One of your personal motives for doing workouts" class="popup-input" required></textarea>
+                <div ng-show="submitted && motiveForm.content.$invalid" class="help-block">
+                  <p ng-show="motiveForm.content.$error.required">Motive is required</p>
+                </div>
+            </div>
+            <button type="submit" class="button">Submit</button>
+          </form>
+        </div>
+    </div>
+</div>
+<script>
+  $('.redirect-popup-overlay').on('click', function(){
+      window.location.href = "/#!/motives";
+    });
+</script>

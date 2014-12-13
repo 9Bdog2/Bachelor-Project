@@ -25,6 +25,9 @@ section { height:100%; }
     .extra-wide { width:100%; }
     .panel-box { padding:2em 0; }
 }
+@media all and (max-width:576px) {
+    body { padding-top:6.3em; }
+}
 
 
 /* General text rules */
@@ -73,6 +76,9 @@ p { font-size:1.6em; line-height:1.3em; margin-bottom:.5em; font-weight:300; }
 
 .button { display:inline-block; font-size:1.4em; height:2.6em; line-height:2.6em; border:none; margin-right:.6em; min-width:6.3em; overflow:hidden; padding:0 1.15em; text-align:center; text-transform:uppercase; color: #FFFFFF; background-color: #2196F3; -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12); font-weight: 500; border-radius:2px; cursor:pointer; }
 .button-transparent { background-color: #FFFFFF; color:#2196F3; box-shadow:none; }
+.button-transparent:hover { background-color:#f5f5f5; }
+.button-red { color:#F44336; }
+.button-yellow { color:#FF8F00; }
 .button-green { background-color:#27ae60; color:#fff; }
 .status-workout-button { color:#fff; background-color:#e74c3c; }
 .status-workout-button:active { background-color:#c0392b; }
@@ -170,5 +176,8 @@ small { font-size:.8em; margin-bottom:1em; font-weight: 500; }
 .global-navigation-item { font-size:1.6em; line-height:2em; color:#333; display:block; padding:.5em 1em; }
 .global-navigation-item:hover { background-color:#f5f5f5; color:#111; }
 .global-navigation-item-icon { margin-right:1.45em; font-size:1.3em; }/*
-.side-bar.active-user { background-color:#424242; }
-.side-bar.active-user .global-navigation-item { color:#efefef; border-bottom-color:#797979; }*/
+
+/* Tabs box */
+.tabs-box { background-color:#fff; border-bottom:1px solid #e0e0e0; overflow:hidden; margin-bottom:3em; }
+.tab-element { font-size:1.6em; height:3em; line-height:3em; overflow:hidden; text-align:center; text-transform:uppercase; background-color:#fff; color:rgba(117, 117, 117, 1); }
+.tab-element:hover { color:#2ecc71; border-bottom:2px solid #2ecc71; }

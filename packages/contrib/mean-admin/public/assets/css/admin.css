@@ -78,6 +78,6 @@ tr.disabled {
 }
 span.editable-wrapper input {
     width: 80%;
-}
-
-.admin-navigation-icon { width:13px; margin-right:.6em; }
+}/*
+.global-navigation-item.admin { color:#D32F2F; }
+.admin-navigation-icon { width:15px; margin-right:1.9em; }*/

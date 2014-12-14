@@ -6,31 +6,35 @@
           event.preventDefault();
           window.location = $(this).attr("href");
       });
-      $('.navigaton-button').click( function() {
+      $('.navigation-button').click( function() {
           $('.side-bar').toggleClass('active');
-           $('.page-overlay').toggleClass('active');
+          $('.page-overlay').toggleClass('active');
+          $('body').toggleClass('no-scroll');
       });
       $('.page-overlay').click( function() {
           $('.side-bar').removeClass('active');
           $('.page-overlay').removeClass('active');
+          $('body').removeClass('no-scroll');
       });
       $('.global-navigation-item').click( function() {
           $('.side-bar').removeClass('active');
           $('.page-overlay').removeClass('active');
+          $('body').removeClass('no-scroll');
       });
 </script>
 
-
-<div class="guest-user-header" data-ng-hide="global.authenticated">
-  <div class="box-wide">
-    <a class="logo" ui-sref="home"><span class="logo-text">H.I.T.T.</span></a>
-    <i class="ion-navicon button-right navigaton-button"></i>
+<header class="guest" data-ng-hide="global.authenticated">
+  <div class="extra-wide">
+    <span class="header-title">H.I.T.T. Challenge</span>
+    <i class="ion-android-menu navigation-button"></i>
   </div>
-</div>
+</header> 
 
-<header class="active-user" data-ng-show="global.authenticated">
-  <span class="header-title">H.I.T.T. Challenge</span>
-  <i class="ion-navicon button-right navigaton-button"></i>
+<header class="user" data-ng-show="global.authenticated">
+  <div class="extra-wide">
+    <span class="header-title">H.I.T.T. Challenge</span>
+    <i class="ion-android-menu navigation-button"></i>
+  </div>
 </header> 
 
 <div class="page-overlay"></div>
@@ -38,19 +42,19 @@
     <h5 class="global-navigation-header">Menu</h5>
     <div class="global-navigation">
         <a ui-sref="home" class="global-navigation-item">
-            <i class="ion-ios7-home global-navigation-item-icon"></i>
+            <i class="ion-android-home global-navigation-item-icon"></i>
             Home
         </a>
         <a ui-sref='auth.register' class="global-navigation-item">
-            <i class="ion-ios7-personadd global-navigation-item-icon"></i>
+            <i class="ion-android-person-add global-navigation-item-icon"></i>
             Signup
         </a>
         <a ui-sref='auth.login' class="global-navigation-item">
-            <i class="ion-ios7-people global-navigation-item-icon"></i>
+            <i class="ion-android-people global-navigation-item-icon"></i>
             Login
         </a>
         <a ui-sref="create message" class="global-navigation-item">
-            <i class="ion-ios7-compose global-navigation-item-icon"></i>
+            <i class="ion-android-drafts global-navigation-item-icon"></i>
             Contact us
         </a>
     </div>
@@ -61,33 +65,30 @@
     </h5>
     <div class="global-navigation">
         <a  ui-sref="home" class="global-navigation-item">
-            <i class="ion-ios7-albums global-navigation-item-icon"></i>
+            <i class="ion-android-favorite global-navigation-item-icon"></i>
             All workouts
         </a>
         <a ui-sref="profile example page" class="global-navigation-item">
-            <i class="ion-ios7-people global-navigation-item-icon"></i>
+            <i class="ion-android-person global-navigation-item-icon"></i>
             Profile
         </a>
         <a ui-sref="all motives"class="global-navigation-item">
-            <i class="ion-ios7-cog global-navigation-item-icon"></i>
+            <i class="ion-android-done global-navigation-item-icon"></i>
             Motivational
         </a>
-        <a href="/logout" class="global-navigation-item">
-            <i class="ion-ios7-people global-navigation-item-icon"></i>
-            Logout
-        </a>
         <a ui-sref="create message" class="global-navigation-item">
-            <i class="ion-ios7-compose global-navigation-item-icon"></i>
+            <i class="ion-android-drafts global-navigation-item-icon"></i>
             Contact us
         </a>
+        <a href="/logout" class="global-navigation-item">
+            <i class="ion-android-exit global-navigation-item-icon"></i>
+            Logout
+        </a>
     </div>
-    <h5 class="global-navigation-header" href="#">
-                        Admin Menu
-    </h5>
-    <div class="admin-menus global-navigation" data-ng-controller="AdminController" >      
-        <a class="global-navigation-item" id="stable" data-ng-repeat="item in menus.admin" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}" ui-sref='{{item.link}}'>
-            <img class="admin-navigation-icon" data-ng-show="item.icon" ng-src="{{item.icon}}">
-            {{item.title}}
+    <div class="admin-menu global-navigation" data-ng-controller="AdminController" >   
+        <a class="global-navigation-item admin" id="stable" data-ng-repeat="item in menus.admin" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}" ui-sref='{{item.link}}'>
+            <i class="ion-android-alert global-navigation-item-icon"></i>
+            Admin: {{item.title}}
         </a>
     </div>
 </div>

@@ -15,14 +15,10 @@
               <div class="input-wrapper">
                   <input required  name="password" class="popup-input" type="{{input.type}}" placeholder="{{input.placeholder}}" ng-model="user.password">
                   <div class="error_message">Please enter a correct info #</div>
-
-                      <span class="pic password {{input.iconClass}}" ng-click = "togglePasswordVisible()">
-                            <div class="hide_text_password">
-                                {{input.tooltipText}}
-                            </div>
-                      </span>
+                  <span class="toggle-password ion-android-lock" ng-click = "togglePasswordVisible()">
+                  </span>
               </div>
-              <button type="submit" class="button">Login</button>
+              <button type="submit" class="button button-in-form">Login</button>
             </form>
         </div>
         <div class="popup-footer">

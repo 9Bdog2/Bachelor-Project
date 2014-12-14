@@ -1,8 +1,7 @@
 <div class="" data-ng-controller="WorkoutController">
    <header>
-        <a ui-sref="home" class="button-left back">Back</a>
+        <a ui-sref="home" class="button-left back"><i class="ion-android-arrow-back"></i></a>
         <h1>7 min workout</h1>
-        <i class="ion-navicon button-right navigaton-button"></i>
     </header>
 
     <div class="current-workout-box">
@@ -20,6 +19,7 @@
 
     
     <div class="popup-box start-exercise-popup active">
+        <div class="popup-background"></div>
         <div class="popup-content">
             <h5 class="popup-headline">Ready?</h5>
             <div class="popup-body">
@@ -28,7 +28,6 @@
                 <p>Rock on!</p>
             </div>
             <div class="popup-footer">
-               <!--  There are two types of buttons for the popup-footer, a popup-button half for where there are 2 buttons and a popup-button large for single full width button -->
                 <span class="button button-green start-exercise-button full">Start!</span>
             </div>
         </div>

@@ -3,6 +3,7 @@
     <div class="popup-content">
         <h5 class="popup-headline">Contact us</h5>
         <div class="popup-body">
+          <form name="messageForm" class="popup-form" role="form" data-ng-submit="create(messageForm.$valid)" novalidate>
             <div class="" ng-class="{ 'has-error' : submitted && messageForm.title.$invalid }">
               <input name="title" type="text" class="popup-input" data-ng-model="title" id="title" placeholder="Email" required>
               <div ng-show="submitted && messageForm.title.$invalid" class="help-block">
@@ -16,7 +17,8 @@
                   <p ng-show="messageForm.content.$error.required">Message is required</p>
                 </div>
             </div>
-            <button type="submit" class="button">Send</button>
+            <button type="submit" class="button button-in-form">Send</button>
+          </form>
         </div>
     </div>
 </div>

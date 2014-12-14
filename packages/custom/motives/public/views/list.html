@@ -7,9 +7,9 @@
 	</div>
   	<div class="list-box">
 	    <div class="list-item" data-ng-repeat="motive in motives">      
-	        <a class="list-item-icon" href="/#!/motives/{{motive._id}}/edit"><i class="ion-compose button-yellow"></i></a>
+	        <a class="list-item-icon" href="/#!/motives/{{motive._id}}/edit"><i class="ion-android-create button-transparent button-yellow"></i></a>
 	        <a class="list-item-text short" data-ng-href="#!/motives/{{motive._id}}">{{motive.content}}</a>
-	        <a class="list-item-icon-right" data-ng-click="remove(motive);"><i class="ion-trash-b button-red"></i></a>
+	        <a class="list-item-icon-right" data-ng-click="remove(motive);"><i class="ion-android-delete button-transparent button-red"></i></a>
 	    </div>
   	</div>
 </div>

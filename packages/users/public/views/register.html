@@ -36,24 +36,18 @@
                          placeholder="{{input.placeholder}}" ng-model="user.password">
 
                   <div class="error_message">Please enter a correct info #</div>
-              <span class="pic password {{input.iconClass}}" ng-click="togglePasswordVisible()">
-                    <div class="hide_text_password">
-                        {{input.tooltipText}}
-                    </div>
-              </span>
+                  <span class="toggle-password ion-android-lock" ng-click = "togglePasswordVisible()">
+                  </span>
               </div>
               <div class="input-wrapper">
                   <input required id="confirm_password" class="popup-input" name="confirm_password" type="{{input.type}}"
                          placeholder="Confirm password" ng-model="user.confirmPassword">
 
                   <div class="error_message">Please enter a correct info #</div>
-              <span class="pic password {{input.iconClassConfirmPass}}" ng-click="togglePasswordConfirmVisible()">
-                    <div class="hide_text_password">
-                        {{input.tooltipTextConfirmPass}}
-                    </div>
-              </span>
+                  <span class="toggle-password ion-android-lock" ng-click = "togglePasswordConfirmVisible()">
+                  </span>
               </div>
-              <button type="submit" class="button">Sign up</button>
+              <button type="submit" class="button button-in-form">Sign up</button>
         </form>
         </div>
         <div class="popup-footer">

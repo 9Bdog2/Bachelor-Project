@@ -5,12 +5,12 @@
             <div class="header-text-box">
                 <h2 class="header-box-headline">H.I.T.T.</h2>
                 <h6>Workout with no need for excuses</h6>
-                <span class="read-manifesto-button"><i class="icon-down-open-big"></i>Scroll down to read the manifesto<i class="icon-down-open-big"></i></span> 
+                <a class="button signup-guest-button" ui-sref='auth.register'>SignUp</a>
             </div>
         </div>
     </div>
 
-    <div class="resume-box">
+    <!-- <div class="resume-box">
         <div class="panel-box">
             <div class="column-grid">
                 <a href="#" class="box-third resume-item">
@@ -24,9 +24,10 @@
                 </a>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="manifesto" id="manifesto">
+        <h4 class="manifesto-headline"><i class="ion-chevron-down manifesto-icon"></i>Manifesto<i class="ion-chevron-down manifesto-icon"></i></h4>
         <div class="box-wide panel-box">
             <h4>We’re not perfect! We’re real people!</h4>
             <div class="content-editor">
@@ -35,12 +36,12 @@
                 <p>We believe in a simple world, where nothing is perfect. But everything is beautiful.</p>
                 <p>We believe in a bright smile, in a healthy body, in feeling full of energy, in having time for everything.</p>
                 <p>This is why we built H.I.T.T. - a simple challenge workout system, that takes less than drinking a coffee, knows how to motivate you and how hard to push you.</p>
-                <a href="#register-email" class="button i-agree-button">I agree</a>
+                <a ui-sref='auth.register' class="button">I agree</a>
             </div>
         </div>
     </div>
 
-    <div class="about-hitt-workouts" id="about-hitt-workouts">
+    <!-- <div class="about-hitt-workouts" id="about-hitt-workouts">
         <div class="box-wide panel-box">
             <h4 class="box-headline">About hiit workouts</h4>
             <div class="column-grid text-content">
@@ -49,8 +50,8 @@
             </div>
         </div>
     </div>
-
-    <div class="how-are-we-better" id="how-are-we-better">
+ -->
+   <!--  <div class="how-are-we-better" id="how-are-we-better">
         <div class="panel-box">
             <div class="column-grid">
                 <div class="box-full box-headline-wrapper">
@@ -70,7 +71,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </section> <!-- Index section for all users -->
 
 <section data-ng-controller="IndexController" data-ng-show="global.authenticated"> <!--All work-outs for authenticated users-->
@@ -79,7 +80,7 @@
             <div class="status-content-box">
                 <div class="status-current-text-box">
                     <h4 class="status-headline">Welcome back {{global.user.name}}</h4>
-                    <a ui-sref="workout example page" class="button status-workout-button">Start today's workout</a>
+                    <a ui-sref="workout 7-min" class="button status-workout-button">Start today's workout</a>
                 </div>
             </div>
         </div>
@@ -90,7 +91,7 @@
             <div class="challenges-content">
                 <h4 class="box-headline"></h4>
                 <div class="column-grid">
-                    <a ui-sref="workout example page" class="card-item box-third">
+                    <a ui-sref="workout 7-min" class="card-item box-third">
                         <div class="card-image-box">
                             <img class="card-image" src="/system/assets/img/background/workout.jpg" alt=""/>
                             <h5 class="card-image-text">7 minutes workout</h5>
@@ -103,7 +104,19 @@
                             <span class="button button-transparent" href="#">Start Workout</span>
                         </div>
                     </a>
-                    
+                    <a href="#" class="card-item box-third">
+                        <div class="card-image-box">
+                            <img class="card-image" src="/system/assets/img/background/hero2.jpg" alt=""/>
+                            <h5 class="card-image-text">Stay tuned</h5>
+                        </div> 
+                        <div class="card-body">
+                            <p>We are in process of getting more workouts ready for you.</p> 
+                            <p>We'll email you when new challenges come up.</p>
+                        </div>
+                        <div class="card-footer">
+                            <span class="button button-transparent" href="#">OK</span>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>

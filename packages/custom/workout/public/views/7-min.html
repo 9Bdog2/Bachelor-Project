@@ -35,6 +35,21 @@
         </div>
     </div> 
 
+    <div class="popup-box finish-exercise-popup">
+        <div class="popup-background"></div>
+        <div class="popup-content">
+            <h5 class="popup-headline">You did it!</h5>
+            <div class="popup-body">
+                <p>One more day of success, one less day until a better habbit.</p>
+                <p>Don't forget to check in tomorrow. It's just 7 minutes ;-)</p>
+                <p>Rock on!</p>
+            </div>
+            <div class="popup-footer">
+                <a href="/#!" class="button button-green start-exercise-button full">Go back!</a>
+            </div>
+        </div>
+    </div> 
+
     <script type="text/javascript">
       var exercises = ['Side planks', 'Side push-ups', 'Lunges', 'Sprint', 'Plank', 'Triceps dips', 'Water break', 'Squats', 'Stepping', 'Crunches', 'Push-ups', 'Wall sit', 'Jumping jacks'];
         var exercisesImages = ['/system/assets/img/background/workout.jpgworkout-12.png', 'workout/assets/img/workouts/workout-11.png', 'workout/assets/img/workouts/workout-10.png', 'workout/assets/img/workouts/workout-09.png', 'workout/assets/img/workouts/workout-08.png', 'workout/assets/img/workouts/workout-07.png', 'workout/assets/img/workouts/water-break.png', 'workout/assets/img/workouts/workout-06.png', 'workout/assets/img/workouts/workout-05.png', 'workout/assets/img/workouts/workout-04.png', 'workout/assets/img/workouts/workout-03.png', 'workout/assets/img/workouts/workout-02.png', 'workout/assets/img/workouts/workout-01.png', ]
@@ -88,9 +103,9 @@
         }
 
             
-                $('.start-exercise-button').click(function(){
-                  $('.start-exercise-popup').removeClass('active');
-                  setTimeout(function(){startCount();}, 300);
-              });
+        $('.start-exercise-button').click(function(){
+            $('.start-exercise-popup').removeClass('active');
+            setTimeout(function(){startCount();}, 300);
+        });
     </script>
 

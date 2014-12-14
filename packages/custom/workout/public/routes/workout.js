@@ -2,9 +2,9 @@
 
 angular.module('mean.workout').config(['$stateProvider',
   function($stateProvider) {
-    $stateProvider.state('workout example page', {
-      url: '/workout/example',
-      templateUrl: 'workout/views/index.html'
+    $stateProvider.state('workout 7-min', {
+      url: '/workout/7-min-workout',
+      templateUrl: 'workout/views/7-min.html'
     });
   }
 ]);

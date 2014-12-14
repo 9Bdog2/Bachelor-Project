@@ -1,5 +1,6 @@
 <div class="popup-box active" data-ng-controller="MessagesController">
-    <div class="popup-background redirect-popup-overlay"></div>
+    <div class="popup-background redirect-popup-overlay" data-ng-hide="global.authenticated"></div>
+    <div class="popup-background redirect-popup-overlay no-background-image" data-ng-show="global.authenticated"></div>
     <div class="popup-content">
         <h5 class="popup-headline">Contact us</h5>
         <div class="popup-body">

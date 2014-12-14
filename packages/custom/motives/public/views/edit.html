@@ -4,7 +4,7 @@
         <div class="popup-body">
           <form name="motiveForm" class="popup-form" role="form" data-ng-submit="update(motiveForm.$valid)" novalidate>
             <div class="form-group" ng-class="{ 'has-error' : submitted && motiveForm.content.$invalid }">
-                <textarea name="content" data-ng-model="motive.content" id="content" cols="30" rows="10" placeholder="Content" class="input" required></textarea>
+                <textarea name="content" data-ng-model="motive.content" id="content" cols="30" rows="10" placeholder="Content" class="popup-input" required></textarea>
                 <div ng-show="submitted && motiveForm.content.$invalid" class="help-block">
                   <p ng-show="motiveForm.content.$error.required">Motivational is required</p>
                 </div>

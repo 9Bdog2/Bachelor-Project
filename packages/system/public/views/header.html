@@ -85,8 +85,8 @@
             Logout
         </a>
     </div>
-    <div class="admin-menu global-navigation" data-ng-controller="AdminController" >   
-        <a class="global-navigation-item admin" id="stable" data-ng-repeat="item in menus.admin" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}" ui-sref='{{item.link}}'>
+    <div class="admin global-navigation" data-ng-controller="AdminController" >   
+        <a class="global-navigation-item" id="stable" data-ng-repeat="item in menus.admin" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}" ui-sref='{{item.link}}'>
             <i class="ion-android-alert global-navigation-item-icon"></i>
             Admin: {{item.title}}
         </a>

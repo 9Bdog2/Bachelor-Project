@@ -5,11 +5,16 @@
 				<a href="/#!/motives/create" class="tab-element box-half">Add new motive</a>
 		</div>
 	</div>
-  	<div class="list-box">
-	    <div class="list-item" data-ng-repeat="motive in motives">      
-	        <a class="list-item-icon" href="/#!/motives/{{motive._id}}/edit"><i class="ion-android-create button-transparent button-yellow"></i></a>
-	        <a class="list-item-text short" data-ng-href="#!/motives/{{motive._id}}">{{motive.content}}</a>
-	        <a class="list-item-icon-right" data-ng-click="remove(motive);"><i class="ion-android-delete button-transparent button-red"></i></a>
+	<div class="extra-wide">
+	    <div class="hero-figure">
+	        <h3 class="hero-text">John Doe</h3>
 	    </div>
-  	</div>
+	  	<div class="list-box">
+		    <div class="list-item" data-ng-repeat="motive in motives">      
+		        <a class="list-item-icon" href="/#!/motives/{{motive._id}}/edit"><i class="ion-android-create button-transparent button-yellow"></i></a>
+		        <a class="list-item-text short" data-ng-href="#!/motives/{{motive._id}}">{{motive.content}}</a>
+		        <a class="list-item-icon-right" data-ng-click="remove(motive);"><i class="ion-android-delete button-transparent button-red"></i></a>
+		    </div>
+	  	</div>
+	</div>
 </div>

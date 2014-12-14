@@ -1,11 +1,12 @@
 /* Profile box */
-.round-user-image { width:34%; margin:0 33% 3em; border-radius:50%; border:.4em solid #7f8c8d; }
+.hero-figure { background-image:url('/system/assets/img/background/hero1.jpg'); background-repeat:no-repeat; background-size:cover; overflow:hidden; padding-top:30%; }
+.hero-text { color:#fff; text-align:center; }
 .list-box { overflow:hidden; }
 .list-item { width:100%; display:block; height:3.5em; line-height:3.5em; background-color:#fff; position:relative; font-size:1.6em; cursor:pointer; }
 .list-item:hover { background-color:#f5f5f5; }
 .list-item-icon { position:absolute; width:1.5em; left:.6em; font-size:1.6em; display:inline-block; text-align:center; color:#388E3C; }
 .list-item-icon-right { position: absolute; width: 1.5em; right: .6em; top: 0; font-size: 1.6em; display: inline-block; text-align: center; color:#555; }
-.list-item-text { width:100%; display:inline-block; margin-left:4.5em; color:#333; line-height:3.3em; height:3.3em; border-bottom:1px solid #e0e0e0; padding-right: 8em; }
+.list-item-text { width:100%; display:inline-block; margin-left:4.5em; color:#333; line-height:3.5em; height:3.5em; border-bottom:1px solid #e0e0e0; padding-right: 8em; box-sizing:border-box; }
 
 .list-item:hover .profile-text { color:#111; }
 .list-item-arrow { position:absolute; top:0; right:1.5em; color:#8e8e93 }

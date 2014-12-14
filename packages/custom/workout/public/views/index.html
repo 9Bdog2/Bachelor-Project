@@ -1,8 +1,11 @@
 <div class="" data-ng-controller="WorkoutController">
-   <header>
-        <a ui-sref="home" class="button-left back"><i class="ion-android-arrow-back"></i></a>
-        <h1>7 min workout</h1>
-    </header>
+
+    <header class="user" data-ng-show="global.authenticated">
+      <div class="extra-wide">
+        <a ui-sref="home" class="button-back button-transparent button-green "><i class="ion-android-arrow-back"></i></a>
+        <span class="header-title">7-min-workout</span>
+      </div>
+    </header> 
 
     <div class="current-workout-box">
         <div class="extra-wide panel-box">
@@ -17,7 +20,6 @@
         </div>
     </div>
 
-    
     <div class="popup-box start-exercise-popup active">
         <div class="popup-background"></div>
         <div class="popup-content">

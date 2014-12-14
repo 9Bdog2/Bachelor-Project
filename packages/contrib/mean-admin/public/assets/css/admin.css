@@ -78,6 +78,16 @@ tr.disabled {
 }
 span.editable-wrapper input {
     width: 80%;
-}/*
-.global-navigation-item.admin { color:#D32F2F; }
-.admin-navigation-icon { width:15px; margin-right:1.9em; }*/
+}
+
+.admin-box { font-size:1.4em; background-color:#fff; }
+.admin-input { font-weight: 300; padding-bottom: 1em; border: none; border-bottom: 1px solid #e0e0e0; font-family: inherit; margin-bottom: 1.125em; background-color: transparent; }
+.admin-delete-button { border: none; color: red; background-color: transparent; font-size: 1.6em; width: 100%; }
+
+
+
+
+
+
+
+

@@ -163,7 +163,7 @@ small { font-size:.8em; margin-bottom:1em; font-weight: 500; }
 /* Status box */
 .status-box { height:50%; background-image:url('/system/assets/img/background/workout.jpg'); background-repeat:no-repeat; background-size:cover; background-position:center; background-color:purple; }
 .status-box .panel-box { height:100%; }
-.status-content-box { position:absolute; bottom:2em; width:100%; text-align:center; color:#fff; }
+.status-content-box { position:absolute; bottom:2em; left:0; width:100%; text-align:center; color:#fff; }
 
 
 /* Side-bar */

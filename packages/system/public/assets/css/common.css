@@ -32,7 +32,7 @@ section[data-ng-hide="global.authenticated"] { margin-top:-6.4em; }
 }
 
 
-/* General text rules */
+/* General text rules 
 h1 { font-size:6em; line-height:1.1em; margin-bottom:.125em; font-weight:300; }
 h2 { font-size:5.6em; line-height:1.1em; margin-bottom:.2em; font-weight:300; }
 h3 { font-size:4.5em; line-height:1.1em; margin-bottom:.3em; font-weight:300; }
@@ -41,7 +41,7 @@ h5 { font-size:2.4em; line-height:1.3em; margin-bottom:.5em; font-weight:300; }
 h6 { font-size:2em; line-height:1.4em; margin-bottom:.5em; font-weight:300; }
 p { font-size:1.6em; line-height:1.3em; margin-bottom:.5em; font-weight:300; }
 .box-headline { text-align:center; color:#7f8c8d; }
-
+*/
  /* Simple Grid */
 .box-full { width:100%; float:left; overflow:hidden; }
 .box-half { width:50%; float:left; }

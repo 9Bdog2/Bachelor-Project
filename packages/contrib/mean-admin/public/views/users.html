@@ -2,8 +2,8 @@
     <div class="extra-wide admin-box shadow">
         <form id="user-add-form" class="row-fluid form-inline" name="addUserForm" data-ng-submit="add()">
             <div class="">
-                <span data-ng-repeat="field in userSchema" class="admin-form">
-                    <input data-ng-if="(field['type'] == 'text' || field['type'] == 'password')" type="{{field['type']}}" class="admin-input" data-ng-model="user[field['schemaKey']]" placeholder="{{field['title']}}" id="user-add-title" />
+                <span data-ng-repeat="field in userSchema">
+                    <input data-ng-if="(field['type'] == 'text' || field['type'] == 'password')" type="{{field['type']}}" class="input" data-ng-model="user[field['schemaKey']]" placeholder="{{field['title']}}" id="user-add-title" />
                     <select data-ng-if="field['type'] == 'select'" data-ng-model="user[field['schemaKey']]" ng-multiple="true" multiple ng-options="option for option in field['options']">
                         <option value="">-- Choose Role --</option>
                     </select>
@@ -12,6 +12,10 @@
             </div>
         </form>
         <div class="loader" data-ng-init="init()" data-ng-hide="users.length"></div>
+        <div class="actions-bar" data-ng-show="users.length">
+            <input type="button" class="button button-red" data-ng-hide="edit" data-ng-click="edit=!edit" value="Edit">
+            <input type="button" class="button" data-ng-show="edit" data-ng-click="edit=!edit" value="Done">
+        </div>
         <table class="table table-striped table-bordered table-hover editable-table" data-ng-show="users.length">
             <tr>
                 <th data-ng-show="edit">
@@ -31,9 +35,5 @@
                 </td>
             </tr>
         </table>
-        <div class="actions-bar" data-ng-show="users.length">
-            <input type="button" class="button button-red" data-ng-hide="edit" data-ng-click="edit=!edit" value="Edit">
-            <input type="button" class="button" data-ng-show="edit" data-ng-click="edit=!edit" value="Done">
-        </div>  
     </div>
 </div>

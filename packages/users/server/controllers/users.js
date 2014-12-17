@@ -109,9 +109,9 @@ exports.create = function(req, res, next) {
     var mailOptions = {
         from: 'HITT ✔ <office.hittchallenge@gmail.com>', // sender address
         to: user.email, // list of receivers
-        subject: 'Hello ✔', // Subject line
-        text: 'Hello world ✔', // plaintext body
-        html: '<b>Hello world ✔</b>' // html body
+        subject: 'Welcome to HITT Challenge', // Subject line
+        text: 'Welcome to HITT Challenge. You are now registered and can signin at any time.', // plaintext body
+        html: '<b>Welcome to HITT Challenge. You are now registered and can signin at any time.</b>' // html body
     };
 
     // send mail with defined transport object
@@ -122,10 +122,11 @@ exports.create = function(req, res, next) {
             console.log('Message sent: ' + info.response);
         }
     });
-    req.logIn(user, function(err) {
-      if (err) return next(err);
-      return res.redirect('/');
-    });
+    // req.logIn(user, function(err) {
+    //   if (err) return next(err);
+    //   return 
+    // });
+    res.redirect('/');
     res.status(200);
   });
 };

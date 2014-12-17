@@ -16,7 +16,7 @@ angular.module('mean.messages').controller('MessagesController', ['$scope', '$st
           content: this.content
         });
         message.$save(function(response) {
-          $location.path('messages/' + response._id);
+          $location.path('/');
         });
 
         this.title = '';

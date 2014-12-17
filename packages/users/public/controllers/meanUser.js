@@ -112,8 +112,8 @@ angular.module('mean.users')
           .success(function() {
             // authentication OK
             $scope.registerError = 0;
-            $rootScope.user = $scope.user;
-            $rootScope.$emit('loggedin');
+            // $rootScope.user = $scope.user;
+            // $rootScope.$emit('loggedin');
             $location.url('/');
           })
           .error(function(error) {
